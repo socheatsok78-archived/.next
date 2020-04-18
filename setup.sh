@@ -14,6 +14,10 @@ echo "$HOME/.zsh_functions"
 echo "$HOME/.zsh_plugins"
 echo "$HOME/.zsh_profile"
 
+# Homebrew house-keeping
+ohai "Updating Homebrew..."
+execute "brew" "update"
+
 # Install Applications and Tools via Homebrew
 ohai "Installing development tools..."
 execute "brew" "bundle" "--no-lock" "--file" "./lib/homebrew/developments.brewfile"
