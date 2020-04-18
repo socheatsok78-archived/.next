@@ -20,6 +20,6 @@ alias ll='ls -alGpF'
 alias lh="ll -h" # human readable file sizes
 
 # sources from .dotfile
-source $HOME/.dotfile/.dotfile/zsh.config.d/aliases/helpers.env
-source $HOME/.dotfile/.dotfile/zsh.config.d/aliases/php.env
-source $HOME/.dotfile/.dotfile/zsh.config.d/aliases/ssh.env
+source $HOME/.dotfile/zsh.config.d/aliases/helpers.env
+source $HOME/.dotfile/zsh.config.d/aliases/php.env
+source $HOME/.dotfile/zsh.config.d/aliases/ssh.env
