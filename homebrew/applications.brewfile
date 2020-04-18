@@ -1,0 +1,19 @@
+# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#  Applications
+# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#
+# This will required user password install!!!
+#
+cask "virtualbox"                   # Oracle VirtualBox
+cask "vlc"                          # VideoLan Media Player
+cask "mounty"                       # NTFS Helper
+cask "db-browser-for-sqlite"        # SQLite DB Browser
+cask "libreoffice"                  # LibreOffice suite
+
+# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#  Cask Applications
+# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#
+cask "iglance"                      # MacOS system monitor for the status bar
+cask "ngrok"                        # ngrok - secure introspectable tunnels to localhost
+cask "pock"                         # Display macOS Dock in Touch Bar
