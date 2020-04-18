@@ -1,4 +1,4 @@
 # sources from .dotfile
-source $HOME/.dotfile/zsh.config.d/env/tiny-care-terminal.env
-source $HOME/.dotfile/zsh.config.d/env/xdebug.env
-source $HOME/.dotfile/zsh.config.d/env/java.env
+test -e "$DOTFILE_HOME/zsh.config.d/env/xdebug.env" &&source "$DOTFILE_HOME/zsh.config.d/env/xdebug.env"
+test -e "$DOTFILE_HOME/zsh.config.d/env/java.env" &&source "$DOTFILE_HOME/zsh.config.d/env/java.env"
+test -e "$DOTFILE_HOME/zsh.config.d/env/tiny-care-terminal.env" &&source "$DOTFILE_HOME/zsh.config.d/env/tiny-care-terminal.env"
