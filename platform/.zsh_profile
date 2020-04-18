@@ -1,0 +1,20 @@
+# Language
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+export EDITOR='nano'
+export GUI_EDITOR='code'
+
+# Prompt Components
+prompt_context() {}
+
+# sources profile from .dotfile
+test -e "$HOME/.dotfile/zsh.config.d/.profile.env" && \
+    source "$HOME/.dotfile/zsh.config.d/.profile.env"
+
+# Parsing all zsh .dotfiles
+test -e "$HOME/.zsh_env" && source "$HOME/.zsh_env"
+test -e "$HOME/.zsh_completion" && source "$HOME/.zsh_completion"
+test -e "$HOME/.zsh_functions" && source "$HOME/.zsh_functions"
+test -e "$HOME/.zsh_aliases" && source "$HOME/.zsh_aliases"
+test -e "$HOME/.zsh_plugins" && source "$HOME/.zsh_plugins"
