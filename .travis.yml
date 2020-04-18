@@ -1,0 +1,13 @@
+stages:
+  - mac
+
+jobs:
+  include:
+    - stage: mac
+      name: One-Click Installer
+      os: osx
+      language: ruby
+      rvm:
+        - 2.6.3
+      script:
+        - sh -c "$(curl -fsSL https://raw.githubusercontent.com/socheatsok78/.next/master/install.sh)"
