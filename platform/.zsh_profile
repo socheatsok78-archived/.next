@@ -9,8 +9,8 @@ export GUI_EDITOR='code'
 prompt_context() {}
 
 # sources profile from .dotfile
-test -e "$HOME/.dotfile/zsh.config.d/.profile.env" && \
-    source "$HOME/.dotfile/zsh.config.d/.profile.env"
+test -e "$HOME/.dotfile/zsh.config.d/profile.env" && \
+    source "$HOME/.dotfile/zsh.config.d/profile.env"
 
 # Parsing all zsh .dotfiles
 test -e "$HOME/.zsh_env" && source "$HOME/.zsh_env"
