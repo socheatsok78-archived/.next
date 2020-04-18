@@ -18,18 +18,26 @@ echo "$HOME/.zsh_profile"
 ohai "Updating Homebrew..."
 execute "brew" "update"
 
+brewbundle () {
+    if [ -n "$CI" ]; then
+        execute "brew" "bundle" "--verbose" "--no-lock" "--file" $@
+    else
+        execute "brew" "bundle" "--no-lock"  "--file" $@
+    fi
+}
+
 # Install Applications and Tools via Homebrew
 ohai "Installing development tools..."
-execute "brew" "bundle" "--no-lock" "--file" "./lib/homebrew/developments.brewfile"
+brewbundle "./lib/homebrew/developments.brewfile"
 
 ohai "Installing tools..."
-execute "brew" "bundle" "--no-lock" "--file" "./lib/homebrew/tools.brewfile"
+brewbundle "./lib/homebrew/tools.brewfile"
 
 ohai "Installing web-server..."
-execute "brew" "bundle" "--no-lock" "--file" "./lib/homebrew/webserver.brewfile"
+brewbundle "./lib/homebrew/webserver.brewfile"
 
 ohai "Installing applications..."
-execute "brew" "bundle" "--no-lock" "--file" "./lib/homebrew/applications.brewfile"
+brewbundle "./lib/homebrew/applications.brewfile"
 
 # Install
 ohai "Installing git aliases..."
