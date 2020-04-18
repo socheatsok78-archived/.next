@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILE_HOME=$HOME/.dotfile
-DOTFILE_TMP=/tmp/.dotfile
+DOTFILE_HOME=${DOTFILE_HOME:-$HOME/.dotfile}
 DOTFILE_REPO=${DOTFILE_REPO:-"https://github.com/socheatsok78/.next.git"}
 
 # string formatters
@@ -56,6 +55,22 @@ execute() {
   fi
 }
 
+####################################################################### traps
+pre_install_trap() {
+    echo
+    warn "Aborted! Cleaning up..."
+    if [ -d "$DOTFILE_HOME" ]; then
+        rm -rf $DOTFILE_HOME
+    fi
+}
+
+trap 'pre_install_trap' SIGINT
+
+####################################################################### pre-flight
+if [ -d "$DOTFILE_HOME" ]; then
+    abort "Another version of dotfile was already installed on the system!"
+fi
+
 # First check if the OS is Linux.
 if [[ "$(uname)" = "Linux" ]]; then
     abort "This dotfile is only available for macOS. Aborted!"
@@ -68,21 +83,5 @@ if [ ! `command -v brew` ]; then
 fi
 
 ####################################################################### script
-ohai "This script will install:"
-echo "${DOTFILE_HOME}/"
-echo "$HOME/.my.cnf"
-echo "$HOME/.zsh_aliases"
-echo "$HOME/.zsh_completion"
-echo "$HOME/.zsh_env"
-echo "$HOME/.zsh_functions"
-echo "$HOME/.zsh_plugins"
-echo "$HOME/.zsh_profile"
-
-ohai "Installing development tools..."
-execute "brew" "bundle" "--no-lock" "--file" "./lib/homebrew/developments.brewfile"
-
-if [[ ":${PATH}:" != *":${DOTFILE_HOME}/bin:"* ]]; then
-    warn "${DOTFILE_HOME}/bin is not in your PATH."
-fi
-
-ohai "Installation successful!"
+ohai "Preparing to install..."
+git clone "$DOTFILE_REPO" "$DOTFILE_HOME" && cd "$DOTFILE_HOME" && ./setup.sh
