@@ -9,6 +9,24 @@ But if you enjoy it please give it a :star:!
 
 [![Build Status](https://travis-ci.com/socheatsok78/.next.svg?branch=master)](https://travis-ci.com/socheatsok78/.next)
 
+## Installation
+To automatically install dotfile on your system, simply run the following command:
+```sh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/socheatsok78/.next/master/install.sh)"
+```
+
+After the installation completed, add the following line to your .bashrc or .zshrc file in your $HOME directory:
+```sh
+# socheatsok78/dotfile
+test -e "$HOME/.zsh_profile" && source "$HOME/.zsh_profile"
+```
+
+## Update
+To get the latest update of dotfile simply run the following command:
+```sh
+$ dotfile update
+```
+
 ### See also
 There are some great dotfiles around:
 - [terkelg/dotfiles](https://github.com/terkelg/dotfiles)
