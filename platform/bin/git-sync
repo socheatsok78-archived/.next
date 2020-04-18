@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Sync a fork of a repository to keep it up-to-date with the upstream repository.
+# https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork
+
+set -e
+
+git-sync() {
+    echo -e "Syncing local repository with upstream..."
+
+    if git fetch upstream; then
+        local LOCAL_BRANCH=$(git --no-pager branch | grep '*' | awk '{print $2}')
+        local REMOTE_BRANCH=$(git --no-pager branch -r | grep "upstream/$CURRENT_BRANCH" | tr -d ' ')
+
+        echo "Current working branch: $LOCAL_BRANCH"
+
+        if [ -n "$REMOTE_BRANCH" ]; then
+            git merge upstream/$LOCAL_BRANCH
+        else
+            git checkout master
+            git merge upstream/master
+        fi
+        
+    fi
+}
+
+git-sync "$@"

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+git-first-commit () {
+    if git --no-pager log --oneline > /dev/null; then
+        echo "fatal: your current branch does not have any commits yet"
+        return 1
+    else
+        echo "Creating initial commit..."
+        git commit -m "Initial commit" --allow-empty
+    fi
+}
+
+git-first-commit

@@ -1,0 +1,25 @@
+#!/bin/sh
+
+#/
+#/ Usage: watts
+#/
+#/ Get the current power usage in watts
+#/
+
+test "$1" = "--help" && {
+    grep ^#/ <"$0"| cut -c4-
+    exit 2
+}
+
+watts() {
+  local FORMULA=$(system_profiler SPPowerDataType | awk '/Amperage\ \(mA\):/ {printf $3" * "}; /Voltage\ \(mV\):/ {print $3}')
+  local WATTS=$(echo "scale=3; ${FORMULA} / 1000000" | bc 2>/dev/null)
+
+  if ! [[ ${WATTS} =~ [0-9] ]];
+  then
+    WATTS=0
+  fi
+  echo "${WATTS} mW"
+}
+
+watts "$@"
