@@ -7,6 +7,8 @@ This is a personal `dotfile` environment, I intend to use on ***my own system***
 
 But if you enjoy it please give it a :star:!
 
+[![Build Status](https://travis-ci.com/socheatsok78/.next.svg?branch=master)](https://travis-ci.com/socheatsok78/.next)
+
 ### See also
 There are some great dotfiles around:
 - [terkelg/dotfiles](https://github.com/terkelg/dotfiles)
