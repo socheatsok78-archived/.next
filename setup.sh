@@ -4,6 +4,10 @@ source "./home/.dotfile/zsh.config.d/functions/homebrew.env"
 
 DOTFILE_HOME=$HOME/.dotfile
 
+test "$1" = "--cask" && {
+    INSTALL_BREW_CASK=1
+}
+
 ohai "This script will install:"
 echo "${DOTFILE_HOME}/"
 echo "$HOME/.my.cnf"
@@ -36,8 +40,11 @@ brewbundle "./lib/homebrew/tools.brewfile"
 ohai "Installing web-server..."
 brewbundle "./lib/homebrew/webserver.brewfile"
 
-ohai "Installing applications..."
-brewbundle "./lib/homebrew/applications.brewfile"
+# Check if allowed to install Homebrew Cask Application
+if [ -n "$INSTALL_BREW_CASK" ]; then
+    ohai "Installing applications..."
+    brewbundle "./lib/homebrew/applications.brewfile"
+fi
 
 # Install
 ohai "Installing git aliases..."
