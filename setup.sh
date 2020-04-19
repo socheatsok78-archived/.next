@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source "./home/.dotfile.env"
 source "./home/.dotfile/zsh.config.d/functions/homebrew.env"
 
 DOTFILE_HOME=$HOME/.dotfile
@@ -48,10 +49,10 @@ fi
 
 # Install
 ohai "Installing git aliases..."
-execute "./lib/shared/install_git_alias.sh"
+execute "./lib/shared/git_alias.sh"
 
 ohai "Installing 3rd-party tools..."
-execute "./lib/shared/install_third_party_tools.sh"
+execute "./lib/shared/third_party_tools.sh"
 
 if [[ ":${PATH}:" != *":${DOTFILE_HOME}/bin:"* ]]; then
     warn "${DOTFILE_HOME}/bin is not in your PATH."
