@@ -9,6 +9,11 @@ test "$1" = "--cask" && {
     INSTALL_BREW_CASK=1
 }
 
+# Pre-flight checklist
+if [ ! -d "$LOCAL_BIN" ]; then
+    mkdir -p $LOCAL_BIN
+fi
+
 ohai "This script will install:"
 echo "${DOTFILE_HOME}/"
 echo "$HOME/.my.cnf"
@@ -47,12 +52,15 @@ if [ -n "$INSTALL_BREW_CASK" ]; then
     brewbundle "./lib/homebrew/applications.brewfile"
 fi
 
-# Install
-ohai "Installing git aliases..."
-execute "./lib/shared/git_alias.sh"
+# Install Additional Tools
+ohai "Installing git configs and tools..."
+execute "./lib/shared/git.sh"
+
+ohai "Installing NodeJS Applications..."
+execute "./lib/shared/node.sh"
 
 ohai "Installing 3rd-party tools..."
-execute "./lib/shared/third_party_tools.sh"
+execute "./lib/shared/tools.sh"
 
 if [[ ":${PATH}:" != *":${DOTFILE_HOME}/bin:"* ]]; then
     warn "${DOTFILE_HOME}/bin is not in your PATH."
