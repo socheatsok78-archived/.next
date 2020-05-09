@@ -20,5 +20,6 @@ npk "http-server"
 npk "ndb"
 
 echo "    - 3rd-party tools"
+npk "npkill"
 npk "insomnia-documenter"
 # npk "tiny-care-terminal"
