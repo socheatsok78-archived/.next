@@ -63,7 +63,7 @@ ohai "Installing 3rd-party tools..."
 execute "./lib/shared/tools.sh"
 
 ohai "Installing ZSH Profile..."
-stow --target=$HOME --ignore=".DS_Store" -Dv "home"
+stow --target ${HOME} --ignore .DS_Store -Rv home
 
 if [[ ":${PATH}:" != *":${DOTFILE_HOME}/bin:"* ]]; then
     warn "${DOTFILE_HOME}/bin is not in your PATH."
