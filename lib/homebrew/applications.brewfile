@@ -4,6 +4,8 @@
 #
 # This will required user password install!!!
 #
+cask "google-chrome"                # Google Chrome
+cask "firefox"                      # Firefox
 cask "visual-studio-code"           # Code editing. Redefined.
 cask "alacritty"                    # A cross-platform, GPU-accelerated terminal emulator
 cask "iterm2"                       # iTerm2 is a replacement for Terminal
