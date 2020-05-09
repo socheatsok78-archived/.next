@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILE_HOME=${DOTFILE_HOME:-$HOME/.dotfile}
+DOTFILE_HOME=${DOTFILE_HOME:-$HOME/.dotfile.local}
 DOTFILE_REPO=${DOTFILE_REPO:-"https://github.com/socheatsok78/.next.git"}
 
 # string formatters
