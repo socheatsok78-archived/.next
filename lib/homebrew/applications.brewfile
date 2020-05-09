@@ -4,6 +4,7 @@
 #
 # This will required user password install!!!
 #
+cask "alacritty"                    # A cross-platform, GPU-accelerated terminal emulator
 cask "virtualbox"                   # Oracle VirtualBox
 cask "vlc"                          # VideoLan Media Player
 cask "mounty"                       # NTFS Helper
