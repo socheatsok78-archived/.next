@@ -20,3 +20,6 @@ brew "heroku/brew/heroku"
 
 # Unit Test
 brew "phpunit"
+
+# Security Tools
+brew "gnupg"
