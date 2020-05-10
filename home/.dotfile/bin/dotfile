@@ -44,4 +44,17 @@ test "$1" = "update" && {
 
     ohai "Updating dotfile..."
     git pull --rebase --stat origin master
+
+    exit 0
+}
+
+test "$1" = "apply" && {
+    shift
+
+    cd "$DOTFILE_HOME.local"
+
+    test "$2" = "--help" && {
+        shift
+    }
+
 }
