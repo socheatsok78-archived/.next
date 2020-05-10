@@ -16,6 +16,7 @@ cask "mounty"                       # NTFS Helper
 cask "db-browser-for-sqlite"        # SQLite DB Browser
 cask "libreoffice"                  # LibreOffice suite
 cask "google-drive-file-stream"     # Google Drive File Stream
+cask "docker"                       # Docker
 
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 #  Cask Applications
