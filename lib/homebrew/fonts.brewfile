@@ -8,3 +8,4 @@ cask "khmer-unicode-layout"
 # Fonts
 cask "font-fira-code"
 cask "font-khmeros-bundle"
+cask "font-open-khmer-school"
