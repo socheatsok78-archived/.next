@@ -9,7 +9,7 @@ ohai "Installing git configs and tools..."
 echo " ---> Installing git alias..."
 
 echo "    - git dry-commit"
-git config --global alias.dry-commit 'commit --allow-empty -m "init project"'
+git config --global alias.dry-commit 'commit --allow-empty -m "✨ initial project"'
 
 echo "    - git reword"
 git config --global alias.reword 'commit --amend'
