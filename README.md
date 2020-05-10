@@ -21,6 +21,16 @@ After the installation completed, add the following line to your .bashrc or .zsh
 test -e "$HOME/.zsh_profile" && source "$HOME/.zsh_profile"
 ```
 
+## Configurations
+
+#### `.zshrc`
+
+```sh
+ZSH_THEME="robbyrussell"
+
+plugins=(ssh-agent git last-working-dir)
+```
+
 ## Update
 To get the latest update of dotfile simply run the following command:
 ```sh
