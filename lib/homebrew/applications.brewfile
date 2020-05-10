@@ -27,3 +27,4 @@ cask "vlc"                          # VideoLan Media Player
 cask "mounty"                       # NTFS Helper
 cask "ngrok"                        # ngrok - secure introspectable tunnels to localhost
 cask "pock"                         # Display macOS Dock in Touch Bar
+cask "cheatsheet"                   # Know your short cuts
