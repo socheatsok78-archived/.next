@@ -49,12 +49,29 @@ test "$1" = "update" && {
 }
 
 test "$1" = "apply" && {
-    shift
-
     cd "$DOTFILE_HOME.local"
+    templates=(applications developments webserver pentest fonts tools)
 
-    test "$2" = "--help" && {
-        shift
+    test "$2" = "" || test "$2" = "--help" && {
+        echo "Available homebrew templates:"
+        for temp in "${templates[@]}"; do
+            echo "    - $temp"
+        done
+        echo -e "\nExample: dotfile apply application"
+        exit 1
     }
 
+    if [[ "${templates}" != *"$2" ]]; then
+        error "Unable to locate template: $2"
+        exit 2
+    fi
+
+    template_file="./lib/homebrew/$2.brewfile"
+
+    if [ -f "$template_file" ]; then
+        ohai "Applying homebrew template: $2"
+        brewbundle $template_file
+    else
+        error "Unable to locate template: $2"
+    fi
 }
