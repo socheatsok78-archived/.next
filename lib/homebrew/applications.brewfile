@@ -10,6 +10,7 @@ cask "visual-studio-code"           # Code editing. Redefined.
 cask "alacritty"                    # A cross-platform, GPU-accelerated terminal emulator
 cask "iterm2"                       # iTerm2 is a replacement for Terminal
 cask "virtualbox"                   # Oracle VirtualBox
+cask "tableplus"
 cask "vlc"                          # VideoLan Media Player
 cask "mounty"                       # NTFS Helper
 cask "db-browser-for-sqlite"        # SQLite DB Browser
