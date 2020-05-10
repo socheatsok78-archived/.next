@@ -28,14 +28,6 @@ echo "$HOME/.zsh_profile"
 ohai "Updating Homebrew..."
 execute "brew" "update"
 
-brewbundle () {
-    if [ -n "$CI" ]; then
-        execute "brew" "bundle" "--verbose" "--no-lock" "--file" $@
-    else
-        execute "brew" "bundle" "--no-lock"  "--file" $@
-    fi
-}
-
 # Install Applications and Tools via Homebrew
 ohai "Installing development tools..."
 brewbundle "./lib/homebrew/developments.brewfile"
