@@ -1,6 +1,5 @@
-
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-#  Cask Applications
+#  Optionsl Cask Applications
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 #
 cask "vlc"                          # VideoLan Media Player

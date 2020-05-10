@@ -18,6 +18,7 @@ brew "doctl"
 brew "travis"
 brew "now-cli"
 brew "heroku/brew/heroku"
+brew "terraform"
 
 # Unit Test
 brew "phpunit"
