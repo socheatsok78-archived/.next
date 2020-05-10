@@ -2,6 +2,7 @@
 #  Optionsl Cask Applications
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 #
+cask "pocket-casts"                 # Pocket Casts
 cask "vlc"                          # VideoLan Media Player
 cask "mounty"                       # NTFS Helper
 cask "ngrok"                        # ngrok - secure introspectable tunnels to localhost
