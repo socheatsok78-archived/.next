@@ -1,0 +1,6 @@
+# Soramitsu Env
+
+brew "awscli"
+brew "awsebcli"
+cask "postman"
+cask "stoplight-studio"
