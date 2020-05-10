@@ -6,6 +6,8 @@
 #
 cask "google-chrome"                # Google Chrome
 cask "firefox"                      # Firefox
+
+# Development
 cask "visual-studio-code"           # Code editing. Redefined.
 cask "fork"                         # Fast and friendly git client
 cask "alacritty"                    # A cross-platform, GPU-accelerated terminal emulator
@@ -15,6 +17,13 @@ cask "db-browser-for-sqlite"        # SQLite DB Browser
 cask "docker"                       # Docker
 cask "insomnia"                     # Insomnia
 cask "insomnia-designer"            # Insomnia Designer
-cask "google-drive-file-stream"     # Google Drive File Stream
 cask "virtualbox"                   # Oracle VirtualBox
 cask "gpg-suite"                    # GPG Suite
+
+# Additionals
+cask "google-drive-file-stream"     # Google Drive File Stream
+cask "pocket-casts"                 # Pocket Casts
+cask "vlc"                          # VideoLan Media Player
+cask "mounty"                       # NTFS Helper
+cask "ngrok"                        # ngrok - secure introspectable tunnels to localhost
+cask "pock"                         # Display macOS Dock in Touch Bar
