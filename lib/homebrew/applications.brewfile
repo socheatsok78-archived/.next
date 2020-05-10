@@ -16,6 +16,8 @@ cask "mounty"                       # NTFS Helper
 cask "db-browser-for-sqlite"        # SQLite DB Browser
 cask "google-drive-file-stream"     # Google Drive File Stream
 cask "docker"                       # Docker
+cask "insomnia"                     # Insomnia
+cask "insomnia-designer"            # Insomnia Designer
 
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 #  Cask Applications
