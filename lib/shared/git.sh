@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 set -e
+source "./home/.dotfile.env"
+source "./home/.dotfile/zsh.config.d/functions/homebrew.env"
+
+ohai "Installing git configs and tools..."
 
 echo " ---> Installing git alias..."
 

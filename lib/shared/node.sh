@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 set -e
+source "./home/.dotfile.env"
+source "./home/.dotfile/zsh.config.d/functions/homebrew.env"
 
 npk() {
     if [ `command -v yarn` ]; then
@@ -10,7 +12,8 @@ npk() {
     fi
 }
 
-# ohai "Installing Node applications..."
+ohai "Installing NodeJS Applications..."
+
 echo "    - Development tools"
 npk "@vue/cli"
 npk "typescript"

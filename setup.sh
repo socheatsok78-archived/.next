@@ -53,20 +53,18 @@ if [ -n "$INSTALL_BREW_CASK" ]; then
 fi
 
 # Install Additional Tools
-ohai "Installing git configs and tools..."
+
+# Installing git configs and tools...
 execute "./lib/shared/git.sh"
 
-ohai "Installing NodeJS Applications..."
+# Installing NodeJS Applications...
 execute "./lib/shared/node.sh"
 
-ohai "Installing 3rd-party tools..."
+# Installing 3rd-party tools...
 execute "./lib/shared/tools.sh"
 
-ohai "Installing ZSH Profile..."
-stow --target ${HOME} --ignore .DS_Store -Rv home
+# Installing ZSH Profile...
+execute "./lib/shared/zsh.sh"
 
-if [[ ":${PATH}:" != *":${DOTFILE_HOME}/bin:"* ]]; then
-    warn "${DOTFILE_HOME}/bin is not in your PATH."
-fi
-
+# Installation successful!
 ohai "Installation successful!"
