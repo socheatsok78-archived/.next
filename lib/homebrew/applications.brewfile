@@ -17,3 +17,4 @@ cask "insomnia"                     # Insomnia
 cask "insomnia-designer"            # Insomnia Designer
 cask "google-drive-file-stream"     # Google Drive File Stream
 cask "virtualbox"                   # Oracle VirtualBox
+cask "gpg-suite-pinentry"           # GPG Suite

@@ -22,6 +22,3 @@ brew "terraform"
 
 # Unit Test
 brew "phpunit"
-
-# Security Tools
-brew "gnupg"
