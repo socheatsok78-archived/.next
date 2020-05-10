@@ -7,21 +7,12 @@
 cask "google-chrome"                # Google Chrome
 cask "firefox"                      # Firefox
 cask "visual-studio-code"           # Code editing. Redefined.
+cask "fork"                         # Fast and friendly git client
 cask "alacritty"                    # A cross-platform, GPU-accelerated terminal emulator
 cask "iterm2"                       # iTerm2 is a replacement for Terminal
-cask "virtualbox"                   # Oracle VirtualBox
 cask "tableplus"                    # TablePlus
-cask "vlc"                          # VideoLan Media Player
-cask "mounty"                       # NTFS Helper
 cask "db-browser-for-sqlite"        # SQLite DB Browser
-cask "google-drive-file-stream"     # Google Drive File Stream
 cask "docker"                       # Docker
 cask "insomnia"                     # Insomnia
 cask "insomnia-designer"            # Insomnia Designer
-
-# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-#  Cask Applications
-# -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-#
-cask "ngrok"                        # ngrok - secure introspectable tunnels to localhost
-cask "pock"                         # Display macOS Dock in Touch Bar
+cask "google-drive-file-stream"     # Google Drive File Stream
