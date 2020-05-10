@@ -31,6 +31,18 @@ ZSH_THEME="robbyrussell"
 plugins=(ssh-agent git last-working-dir)
 ```
 
+#### Apply Homebrew `brewfile`
+By default the following template will be automically applied during `dotfile` installation:
+- developments
+- webserver
+- tools
+
+Otherwise please check this folder for more details `lib/homebrew`
+
+```sh
+dotfile apply [template]
+```
+
 ## Update
 To get the latest update of dotfile simply run the following command:
 ```sh
