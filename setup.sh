@@ -60,6 +60,9 @@ execute "./lib/shared/git.sh"
 # Installing NodeJS Applications...
 execute "./lib/shared/node.sh"
 
+# Installing Composer Applications...
+execute "./lib/shared/composer.sh"
+
 # Installing 3rd-party tools...
 execute "./lib/shared/tools.sh"
 
