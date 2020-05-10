@@ -13,3 +13,4 @@ ohai "Installing Composer Applications..."
 
 poser "laravel/installer"
 poser "laravel/valet"
+poser "laravel/envoy"
