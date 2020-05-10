@@ -12,6 +12,7 @@ brew "yarn"
 
 # Deployment Tools
 brew "gh"
+brew "awscli"
 brew "awsebcli"
 brew "doctl"
 brew "travis"
