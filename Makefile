@@ -9,4 +9,4 @@ build-start:
 
 vscode:
 	@echo "    - Generating Visual Studio Code Extensions"
-	@code --list-extensions >> ${VSCODE_EXTENSIONS}
+	@code --list-extensions | tee ${VSCODE_EXTENSIONS}
