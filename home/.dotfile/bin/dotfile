@@ -6,10 +6,11 @@ source $HOME/.dotfile/zsh.config.d/functions/homebrew.env
 #/ dotfile management tool
 #/
 #/ Options:
-#/     --help    output usage information
+#/     --help       Output usage information
 #/
 #/ Commands:
-#/     update
+#/     update       Update dotfile
+#/     apply        Apply homebrew template
 #/
 
 # First, check if dotfile is installed
@@ -24,8 +25,6 @@ test "$1" = "--help" && {
 }
 
 test "$1" = "update" && {
-    shift
-
     cd "$DOTFILE_HOME"
     DOTFILE_DIRTY=$(git clean -dfn)
 
@@ -45,6 +44,7 @@ test "$1" = "update" && {
     ohai "Updating dotfile..."
     git pull --rebase --stat origin master
 
+    shift
     exit 0
 }
 
@@ -69,5 +69,9 @@ test "$1" = "apply" && {
         brewbundle $template_file
     else
         error "Unable to locate template: $2"
+        exit 2
     fi
+
+    shift 2
+    exit 0
 }
