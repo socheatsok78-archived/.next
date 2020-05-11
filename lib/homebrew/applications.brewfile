@@ -22,6 +22,7 @@ cask "gpg-suite"                    # GPG Suite
 
 # Additionals
 cask "google-drive-file-stream"     # Google Drive File Stream
+cask "chrome-remote-desktop-host"   # Chrome Remote Desktop Host
 cask "pocket-casts"                 # Pocket Casts
 cask "vlc"                          # VideoLan Media Player
 cask "mounty"                       # NTFS Helper
