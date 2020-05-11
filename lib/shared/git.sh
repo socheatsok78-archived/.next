@@ -6,7 +6,17 @@ source "./home/.dotfile/zsh.config.d/functions/homebrew.env"
 
 ohai "Installing git configs and tools..."
 
-echo " ---> Installing git alias..."
+# Git Config
+echo " ---> Installing git configs..."
+
+echo "    - Use macOS Keychain to store HTTP passwords"
+git config --global credential.helper 'osxkeychain'
+
+# Git aliases
+echo " ---> Installing git aliases..."
+
+echo "    - git s"
+git config --global alias.s 'status --short --branch'
 
 echo "    - git dry-commit"
 git config --global alias.dry-commit 'commit --allow-empty -m "✨ initial project"'
