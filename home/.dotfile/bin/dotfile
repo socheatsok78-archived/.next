@@ -19,6 +19,8 @@ if [ ! -d "$DOTFILE_HOME" ]; then
     exit 1
 fi
 
+DOTFILE_LOCAL="$DOTFILE_HOME.local"
+
 test "$1" = "--help" && {
     grep ^#/ <"$0"| cut -c4-
     exit 2
@@ -49,7 +51,7 @@ test "$1" = "update" && {
 }
 
 test "$1" = "apply" && {
-    cd "$DOTFILE_HOME.local"
+    cd $DOTFILE_LOCAL
     templates=($(ls -d lib/homebrew/*.brewfile))
 
     test "$2" = "" || test "$2" = "--help" && {
@@ -66,6 +68,34 @@ test "$1" = "apply" && {
 
     if [ -f "$template_file" ]; then
         ohai "Applying homebrew template: $2"
+        brewbundle $template_file
+    else
+        error "Unable to locate template: $2"
+        exit 2
+    fi
+
+    shift 2
+    exit 0
+}
+
+test "$1" = "system" && {
+    cd $DOTFILE_LOCAL
+    templates=($(ls -d lib/system/*.brewfile))
+
+    test "$2" = "" || test "$2" = "--help" && {
+        echo "Available system templates:"
+        for temp in "${templates[@]}"; do
+            template_name=$(basename $temp)
+            echo "    - ${template_name%.*}"
+        done
+        echo "\nExample: dotfile system socheatsok78"
+        exit 1
+    }
+
+    template_file="./lib/system/$2.brewfile"
+
+    if [ -f "$template_file" ]; then
+        ohai "Applying system template: $2"
         brewbundle $template_file
     else
         error "Unable to locate template: $2"
