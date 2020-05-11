@@ -43,7 +43,7 @@ git config --global alias.lg "log --graph --date=relative --pretty=tformat:'%Cre
 echo "    - git review-local"
 git config --global alias.review-local "!git lg @{push}.."
 
-echo "    - git aliases"
-git config --global alias.aliases "!git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'"
+# echo "    - git aliases"
+# git config --global alias.aliases "!git config --get-regexp alias | sed -e 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'"
 
 echo " ---> git alias installed!"
