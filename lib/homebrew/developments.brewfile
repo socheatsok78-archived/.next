@@ -8,6 +8,7 @@ brew "git"
 brew "composer"
 brew "node"                 # Node LTS
 brew "node@10"              # Node v10
+brew "deno"                 # Deno A secure runtime for JavaScript and TypeScript.
 brew "yarn"
 
 # Deployment Tools
