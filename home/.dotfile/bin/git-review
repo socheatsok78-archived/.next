@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+if [ -n "$@" ]; then
+    git fetch origin
+    git checkout "$@"
+    git merge --ff-only @{upstream}
+else
+    echo "Please specify a branch to review."
+fi
