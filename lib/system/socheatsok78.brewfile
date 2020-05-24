@@ -10,6 +10,7 @@ mas 'Image2icon', id: 992115977
 mas 'Bear', id: 1091189122
 mas 'Messenger', id: 1480068668
 mas 'Telegram', id: 747648890
+cask 'notion'
 
 # Apple
 mas 'Keynote', id: 409183694
