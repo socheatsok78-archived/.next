@@ -1,6 +1,3 @@
-# Makefile Requirements
-brew "stow"
-
 # Application manager
 brew "mas"
 
