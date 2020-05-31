@@ -10,7 +10,9 @@ source $HOME/.dotfile/zsh.config.d/functions/homebrew.env
 #/
 #/ Commands:
 #/     update       Update dotfile
+#/     upgrade      Upgrade dotfile
 #/     apply        Apply homebrew template
+#/     system       Apply system homebrew template
 #/
 
 # First, check if dotfile is installed
