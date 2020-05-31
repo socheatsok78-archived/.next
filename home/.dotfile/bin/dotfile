@@ -50,6 +50,17 @@ test "$1" = "update" && {
     exit 0
 }
 
+test "$1" = "upgrade" && {
+    cd "$DOTFILE_LOCAL"
+    dotfile update
+
+    ohai "Upgrading dotfile..."
+    execute "./setup.sh" "$@"
+
+    shift
+    exit 0
+}
+
 test "$1" = "apply" && {
     cd $DOTFILE_LOCAL
     templates=($(ls -d lib/homebrew/*.brewfile))
