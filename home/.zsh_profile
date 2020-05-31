@@ -16,6 +16,7 @@ test -e "$DOTFILE_HOME/zsh.config.d/profile.env" && \
     source "$DOTFILE_HOME/zsh.config.d/profile.env"
 
 # Parsing all zsh .dotfiles
+test -e "$HOME/.zsh_antigen" && source "$HOME/.zsh_antigen"
 test -e "$HOME/.zsh_env" && source "$HOME/.zsh_env"
 test -e "$HOME/.zsh_completion" && source "$HOME/.zsh_completion"
 test -e "$HOME/.zsh_functions" && source "$HOME/.zsh_functions"
