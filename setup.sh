@@ -29,6 +29,9 @@ ohai "Updating Homebrew..."
 execute "brew" "update"
 
 # Install Applications and Tools via Homebrew
+ohai "Installing prerequisite..."
+brewbundle "./lib/commons/commons.brewfile"
+
 ohai "Installing development tools..."
 brewbundle "./lib/homebrew/developments.brewfile"
 
