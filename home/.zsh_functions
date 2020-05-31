@@ -36,3 +36,8 @@ dock-add-spacer() {
         killall Dock
     fi
 }
+
+# no f*ck given
+if [ `command -v thefuck` ]; then
+    eval $(thefuck --alias)
+fi

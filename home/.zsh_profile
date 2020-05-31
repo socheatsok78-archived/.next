@@ -21,3 +21,9 @@ test -e "$HOME/.zsh_completion" && source "$HOME/.zsh_completion"
 test -e "$HOME/.zsh_functions" && source "$HOME/.zsh_functions"
 test -e "$HOME/.zsh_aliases" && source "$HOME/.zsh_aliases"
 test -e "$HOME/.zsh_plugins" && source "$HOME/.zsh_plugins"
+
+# more macOS/Bash-like word jumps
+export WORDCHARS=""
+
+# Colorful prompt with Git and Subversion branch
+autoload -U colors && colors
