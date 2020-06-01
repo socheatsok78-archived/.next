@@ -47,6 +47,9 @@ if [ -n "$INSTALL_BREW_CASK" ]; then
     brewbundle "./lib/homebrew/applications.brewfile"
 fi
 
+ohai "Installing fonts..."
+brewbundle "./lib/homebrew/fonts.brewfile"
+
 # Install Additional Tools
 
 # Installing git configs and tools...
