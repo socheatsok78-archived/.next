@@ -2,6 +2,7 @@
 tap "github/gh"
 tap "facebook/fb"
 tap "heroku/brew"
+tap "dart-lang/dart"
 
 # Development Environment
 brew "git"
@@ -11,6 +12,7 @@ brew "node"                 # Node LTS
 brew "node@10"              # Node v10
 brew "deno"                 # Deno A secure runtime for JavaScript and TypeScript.
 brew "yarn"
+brew "dart"                 # Dart
 
 # Deployment Tools
 brew "gh"
