@@ -25,6 +25,7 @@ mas 'Spark', id: 1176895641
 mas 'Magnet', id: 441258766
 mas 'Adblock', id: 1432731683
 mas 'Outline', id: 1356178125
+cask 'outline-manager'
 
 # Development
 mas "Xcode", id: 497799835
