@@ -8,6 +8,16 @@ clear() {
     welcome;
 }
 
+# Reload ZSH Config
+reload() {
+    if [ `command -v antigen` ]; then
+        antigen reset
+        exit 0
+    fi
+
+    test -e ~/.zshrc && source ~/.zshrc
+}
+
 # Local IP
 localip() {
     ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
