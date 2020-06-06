@@ -8,11 +8,12 @@ npk() {
     if [ `command -v yarn` ]; then
         yarn global add $@ --no-progress --silent
     else
-        npm install --quiet --no-progress --global $@
+        echo "[SKIP] Node.js Applications"
+        return 1
     fi
 }
 
-ohai "Installing NodeJS Applications..."
+ohai "Installing Node.js Applications..."
 
 echo "    - Development tools"
 npk "@vue/cli"
