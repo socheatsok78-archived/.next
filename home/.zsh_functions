@@ -12,7 +12,6 @@ clear() {
 reload() {
     if [ `command -v antigen` ]; then
         antigen reset
-        exit 0
     fi
 
     test -e ~/.zshrc && source ~/.zshrc
