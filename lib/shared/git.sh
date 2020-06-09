@@ -9,6 +9,9 @@ ohai "Installing git configs and tools..."
 # Git Config
 echo " ---> Installing git configs..."
 
+echo "    - Use pull rebase"
+git config --global pull.rebase true
+
 echo "    - Use macOS Keychain to store HTTP passwords"
 git config --global credential.helper 'osxkeychain'
 
