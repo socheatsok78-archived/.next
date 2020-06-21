@@ -18,6 +18,7 @@ ohai "Installing Node.js Applications..."
 echo "    - Development tools"
 npk "@vue/cli"
 npk "typescript"
+npk "yo"
 
 echo "    - CLI tools"
 npk "http-server"
