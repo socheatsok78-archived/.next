@@ -1,3 +1,4 @@
 brew "stow"
 brew "antigen"
 brew "whalebrew" # Homebrew, but with Docker images
+brew "svn"
