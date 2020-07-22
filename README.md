@@ -31,6 +31,30 @@ ZSH_THEME="robbyrussell"
 plugins=(ssh-agent git last-working-dir)
 ```
 
+**Changing ASCII profile art**
+
+By default the ascii art is set to my personal one. But you could change to to your preferences.
+
+Simply create a new function eg. `andrew` that will print out the ASCII art and set the `ZSH_ASCII_PROFILE` variable to equal that function name and add it to the line before `source` operation.
+
+```sh
+
+function andrew() {
+    echo -e "     _              _                   "
+    echo -e "    / \   _ __   __| |_ __ _____      __"
+    echo -e "   / _ \ | '_ \ / _\` | '__/ _ \ \ /\ / /"
+    echo -e "  / ___ \| | | | (_| | | |  __/\ V  V / "
+    echo -e " /_/   \_\_| |_|\__,_|_|  \___| \_/\_/  "
+    echo -e " \n A senior developer is helpful, not all- \n knowing.\n"
+}
+
+# ASCII Art
+ZSH_ASCII_PROFILE=andrew
+
+# socheatsok78/dotfile
+test -e "$HOME/.zsh_profile" && source "$HOME/.zsh_profile"
+```
+
 #### Apply Homebrew `brewfile` templates
 By default the following template will be automically applied during `dotfile` installation:
 - developments
