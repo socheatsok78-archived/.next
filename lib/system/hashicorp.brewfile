@@ -1,5 +1,6 @@
 # Hashicorp
 tap "hashicorp/tap"
 
+brew "vagrant"
 brew "hashicorp/tap/waypoint"
 brew "hashicorp/tap/terraform"
