@@ -21,7 +21,6 @@ brew "awsebcli"
 brew "doctl"
 brew "travis"
 brew "heroku/brew/heroku"
-brew "terraform"
 
 # Unit Test
 brew "phpunit"
