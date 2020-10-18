@@ -1,0 +1,5 @@
+# Hashicorp
+tap "hashicorp/tap"
+
+brew "hashicorp/tap/waypoint"
+brew "hashicorp/tap/terraform"
