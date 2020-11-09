@@ -31,3 +31,4 @@ cask "pock"                         # Display macOS Dock in Touch Bar
 cask "cheatsheet"                   # Know your short cuts
 cask "dozer"                        # Hide menu bar icons
 cask "stand"                        # Reminds you to stand up
+cask "eul"                          # macOS status monitoring app written in SwiftUI
