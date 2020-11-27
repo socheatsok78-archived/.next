@@ -8,8 +8,7 @@ tap "dart-lang/dart"
 brew "git"
 brew "hub"                  # https://hub.github.com/
 brew "composer"
-brew "node"                 # Node LTS
-brew "node@10"              # Node v10
+brew "node@14"              # Node v10
 brew "deno"                 # Deno A secure runtime for JavaScript and TypeScript.
 brew "yarn"
 brew "dart"                 # Dart
