@@ -20,6 +20,7 @@ brew "awsebcli"
 brew "doctl"
 brew "travis"
 brew "heroku/brew/heroku"
+brew "vercel-cli"
 
 # Unit Test
 brew "phpunit"
