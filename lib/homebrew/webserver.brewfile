@@ -3,8 +3,8 @@
 # -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 #
 # PHP
-brew "php", link: true # PHP Latest
-brew "php@7.3" # PHP 7.3
+brew "php" # PHP Latest
+brew "php@7.4", link: true # PHP 7.4
 
 # Web Server
 brew "nginx", restart_service: true, link: true # Nginx Web Server
