@@ -12,7 +12,7 @@ But if you enjoy it please give it a :star:!
 ## Installation
 To automatically install dotfile on your system, simply run the following command:
 ```sh
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/socheatsok78/.next/master/install.sh)"
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/socheatsok78/.next/main/install.sh)"
 ```
 
 After the installation completed, add the following line to your .bashrc or .zshrc file in your $HOME directory:
